@@ -22,13 +22,13 @@ public class Move {
         if(Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches()){
              this.tjugada = 0;
         }else if(Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][x][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches() ){
-             this.tjugada = 0;
-        }else if(Pattern.compile(nDescrip).matcher("^O-O$|^O-O-O$" ).matches()){
              this.tjugada = 1;
-        }else if(Pattern.compile(nDescrip).matcher("^P-(R|K(?!K|Q)|B|N|Q(?!K|Q))8/(Q|B|R|N)$").matches()){
+        }else if(Pattern.compile(nDescrip).matcher("^O-O$|^O-O-O$" ).matches()){
              this.tjugada = 2;
+        }else if(Pattern.compile(nDescrip).matcher("^P-(R|K(?!K|Q)|B|N|Q(?!K|Q))8/(Q|B|R|N)$").matches()){
+             this.tjugada = 3;
         }else{
-            this.tjugada = 3;
+            this.tjugada = 4;
         }
     }
     // Hacer uso de Maquina traductora para convertirlo a nAlgebraica
