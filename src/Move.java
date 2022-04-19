@@ -22,9 +22,9 @@ public class Move {
         this.nAlgebr = null;
         this.isWhite = isWhite;
 
-        if( Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$" ).matches() ){
+        if(Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches()){
              this.tjugada = 0;
-        }else if( Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][x][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$" ).matches() ){
+        }else if(Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][x][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches() ){
              this.tjugada = 0;
         }else if(Pattern.compile(nDescrip).matcher("^O-O$|^O-O-O$" ).matches()){
              this.tjugada = 1;
@@ -33,7 +33,7 @@ public class Move {
         }else{
             this.tjugada = 3;
         }
-
     }
+    // Hacer uso de Maquina traductora para convertirlo a
 
 }
