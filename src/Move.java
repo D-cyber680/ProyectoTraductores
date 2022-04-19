@@ -34,6 +34,6 @@ public class Move {
             this.tjugada = 3;
         }
     }
-    // Hacer uso de Maquina traductora para convertirlo a
+    // Hacer uso de Maquina traductora para convertirlo a nAlgebraica
 
 }
