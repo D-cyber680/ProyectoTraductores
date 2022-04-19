@@ -2,10 +2,14 @@ import java.util.ArrayList;
 
 public class Game {
     ArrayList<Move> moves;
-
+    public ArrayList<Move> StringGametolistMoves(String game){
+        ArrayList<Move> moves = null;
+        
+        return moves;
+    }
 
     // This methods takes a list of moves and returns a String with moves
-    public String listToGame(ArrayList<String> moves ){
+    public String listToGameAlg(ArrayList<String> moves ){
         String game = "";
         //code
 
