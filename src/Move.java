@@ -32,5 +32,5 @@ public class Move {
         }
     }
     // Hacer uso de Maquina traductora para convertirlo a nAlgebraica
-
+    //Si un movimiento tirar una Excepcion y decir donde esta el error
 }
