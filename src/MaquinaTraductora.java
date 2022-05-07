@@ -7,8 +7,59 @@ public class MaquinaTraductora {
     }
     // This method accepts a move in string format with descriptive notation and returns it
     // into algebraic notation
-    public String descripToAlgebTransMove(String move){
-        String movAlg = "";
+    public String descripToAlgebTransMove(Move move){
+        String movAlg = move.nAlgebr;
+        String piece, col, row;
+       // char[] columns = {'a', 'b', 'c', 'd', 'e','f','g','h'};
+        switch(move.tjugada)
+        {
+            case 0:
+            piece = Character.toString(move.nDescrip.charAt(0));
+            row = Character.toString(move.nDescrip.charAt(1));
+            switch( move.nDescrip.substring(2,4) )
+            {
+                case "RQ":
+                    col = "a";
+                    break;
+                case "NQ":
+                    col = "b";
+                    break;
+                case "BQ":
+                    col = "c";
+                    break;
+                case "BK":
+                    col = "f";
+                    break;
+                case "NK":
+                    col = "g";
+                    break;
+                case "RK":
+                    col = "h";
+                    break;
+                default:
+                    switch (move.nDescrip.substring(2,3))
+                    {
+                        case "K":
+                            col = "e";
+                            break;
+                        case "Q":
+                            col = "d";
+                            break;
+                    }
+            }
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            default:
+
+        }
 
         return movAlg;
     }

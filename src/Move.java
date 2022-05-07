@@ -20,9 +20,9 @@ public class Move {
         this.nAlgebr = nAlgebr;
         this.isWhite = isWhite;
     //if(nAlgebr == null && nDescrip != null) {
-        if (Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches()) {
+        if (Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B|N][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches()) {
             this.tjugada = 0;
-        } else if (Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B][x][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches()) {
+        } else if (Pattern.compile(nDescrip).matcher("^[P|K|Q|R|B|N][x][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matches()) {
             this.tjugada = 1;
         } else if (Pattern.compile(nDescrip).matcher("^O-O$|^O-O-O$").matches()) {
             this.tjugada = 2;
@@ -35,5 +35,5 @@ public class Move {
 
     }
     // Hacer uso de Maquina traductora para convertirlo a nAlgebraica
-    //Si un movimiento tirar una Excepcion y decir donde esta el error
+    // Si un movimiento tirar una Excepcion y decir donde esta el error
 }
