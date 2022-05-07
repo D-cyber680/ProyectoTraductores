@@ -14,7 +14,12 @@ public class MaquinaTraductora {
         switch(move.tjugada)
         {
             case 0:
-            piece = Character.toString(move.nDescrip.charAt(0));
+                if (Character.toString(move.nDescrip.charAt(0)).equals("P"))
+                {
+                    piece = "";
+                }else {
+                    piece = Character.toString(move.nDescrip.charAt(0)).toLowerCase();
+                }
             row = Character.toString(move.nDescrip.charAt(1));
             switch( move.nDescrip.substring(2,4) )
             {
@@ -45,11 +50,53 @@ public class MaquinaTraductora {
                         case "Q":
                             col = "d";
                             break;
+                        default:
+                            col = "";
                     }
+                    move.nAlgebr = piece + col + row;
             }
                 break;
             case 1:
-
+                if ( Character.toString(move.nDescrip.charAt(0)).equals("P") )
+                {
+                    piece = "";
+                }else {
+                    piece = Character.toString(move.nDescrip.charAt(0)).toLowerCase();
+                }
+                row = Character.toString(move.nDescrip.charAt(2));
+                switch( move.nDescrip.substring(3,5) )
+                {
+                    case "RQ":
+                        col = "a";
+                        break;
+                    case "NQ":
+                        col = "b";
+                        break;
+                    case "BQ":
+                        col = "c";
+                        break;
+                    case "BK":
+                        col = "f";
+                        break;
+                    case "NK":
+                        col = "g";
+                        break;
+                    case "RK":
+                        col = "h";
+                        break;
+                    default:
+                        switch (move.nDescrip.substring(3, 4))
+                        {
+                            case "K":
+                                col = "e";
+                                break;
+                            case "Q":
+                                col = "d";
+                                break;
+                            default:
+                                col = "";
+                        }
+                }
                 break;
             case 2:
 
