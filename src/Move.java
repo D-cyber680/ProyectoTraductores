@@ -26,7 +26,7 @@ public class Move {
             this.tjugada = 1;
         } else if (Pattern.compile(nDescrip).matcher("^O-O$|^O-O-O$").matches()) {
             this.tjugada = 2;
-        } else if (Pattern.compile(nDescrip).matcher("^P-(R|K(?!K|Q)|B|N|Q(?!K|Q))8/(Q|B|R|N)$").matches()) {
+        } else if (Pattern.compile(nDescrip).matcher("^P-([KQ]|(R[KQ]|N[KQ]|B[KQ]))8\\/([QRBN])$").matches()) {
             this.tjugada = 3;
         } else {
             this.tjugada = 4;

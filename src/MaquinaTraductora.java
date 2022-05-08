@@ -99,7 +99,7 @@ public class MaquinaTraductora {
                 }
                 break;
             case 2:
-
+                move.nAlgebr = move.nDescrip;
                 break;
             case 3:
 
