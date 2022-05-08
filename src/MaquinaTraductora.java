@@ -102,7 +102,18 @@ public class MaquinaTraductora {
                 move.nAlgebr = move.nDescrip;
                 break;
             case 3:
-
+                piece = "";
+                switch (move.nDescrip.length()){
+                    case 6:
+                        if (Character.toString(move.nDescrip.charAt(2)).equals("K")){
+                            col = "e";
+                        }else if(Character.toString(move.nDescrip.charAt(2)).equals("Q")){
+                            col = "d";
+                        }
+                        break;
+                    case 7:
+                        break;
+                }
                 break;
             default:
 
