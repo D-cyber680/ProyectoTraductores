@@ -13,7 +13,7 @@ public class Move {
     // "^P-(R|K(?!K|Q)|B|N|Q(?!K|Q))8/(Q|B|R|N)$" -> 3
 
 
-    public Move(String nDescrip,String nAlgebr ,Boolean isWhite, String patt)
+    public Move(String nDescrip,String nAlgebr ,Boolean isWhite)
     {
 
         this.nDescrip = nDescrip;

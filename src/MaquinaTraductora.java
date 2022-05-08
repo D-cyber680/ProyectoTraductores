@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.lang.StringBuilder;
 public class MaquinaTraductora {
 
     public MaquinaTraductora() {
@@ -9,9 +9,7 @@ public class MaquinaTraductora {
     // This method accepts a move in string format with descriptive notation and returns it
     // into algebraic notation
     public String descripToAlgebTransMove(Move move) {
-        String movAlg = move.nAlgebr;
-        String piece, col, row;
-        // char[] columns = {'a', 'b', 'c', 'd', 'e','f','g','h'};
+        String piece, col = null, row;
         switch (move.tjugada) {
             case 0:
                 if (Character.toString(move.nDescrip.charAt(0)).equals("P")) {
@@ -91,8 +89,10 @@ public class MaquinaTraductora {
                                 col = "";
                         }
                 }
+                move.nAlgebr = piece + "x" + col + row;
                 break;
             case 2:
+            case 4:
                 move.nAlgebr = move.nDescrip;
                 break;
             case 3:
@@ -106,28 +106,38 @@ public class MaquinaTraductora {
                         }
                         break;
                     case 7:
-                        switch (move.nDescrip.substring(2, 4)) {
+                        switch (move.nDescrip.substring(2, 4))
+                        {
                             case "RK":
+                                col = "h";
                                 break;
                             case "NK":
+                                col = "g";
                                 break;
                             case "BK":
+                                col = "f";
                                 break;
                             case "RQ":
+                                col = "a";
                                 break;
                             case "NQ":
+                                col = "b";
                                 break;
                             case "BQ":
+                                col = "c";
                                 break;
                         }
-                        break;
                 }
+                if (move.isWhite){
+                    row = "8";
+                }else{
+                    row = "1";
+                }
+                move.nAlgebr = col + row + "=" + move.nDescrip.charAt(move.nDescrip.length() - 1);
                 break;
-            default:
-
         }
 
-        return movAlg;
+        return move.nAlgebr;
     }
 
     // This method takes List of moves in descriptive notation and returns a list
@@ -137,6 +147,7 @@ public class MaquinaTraductora {
 
         return movAlg;
     }
+}
 
 
 //   public String algebToDescripTrans(String mov){
@@ -145,10 +156,3 @@ public class MaquinaTraductora {
 //        return movDescrip;
 //    }
 
-    public static String colDescriptoAlg(Move move){
-        //returns the letter of the column in algebraic notation according yo
-        // the --type of move-- using substring method
-        return "";
-    }
-
-}
