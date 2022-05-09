@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Game {
-    ArrayList<Move> moves;
+    ArrayList<Move> moves = new ArrayList<>();
 
     public Game(String game) {
         StringGametolistMoves(game);

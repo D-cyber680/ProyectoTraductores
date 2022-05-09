@@ -86,25 +86,6 @@ public class MaquinaTraductora {
                 move.nAlgebr = col + row + "=" + move.nDescrip.charAt(move.nDescrip.length() - 1);
             }
         }
-
     }
-
-    // This method takes List of moves in descriptive notation and returns a list
-    // of moves in algebraic notation
-//    public String descripToAlgebTransGame(String[] game)
-//    {
-//        String movAlg = "";
-//
-//        return movAlg;
-//    }
-
-//    public String[] textToarrayMoves(String gameName) {
-//        return gameName.split("\\s+");
-//    }
 }
-//   public String algebToDescripTrans(String mov){
-//        String movDescrip = "";
-//
-//        return movDescrip;
-//    }
 
