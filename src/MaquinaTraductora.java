@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class MaquinaTraductora {
 
     public MaquinaTraductora() {
@@ -15,11 +13,11 @@ public class MaquinaTraductora {
                 if (Character.toString(move.nDescrip.charAt(0)).equals("P")) {
                     piece = "";
                 } else {
-                    piece = Character.toString(move.nDescrip.charAt(0)).toLowerCase();
+                    piece = Character.toString(move.nDescrip.charAt(0));
                 }
                 row = Character.toString(move.nDescrip.charAt(1));
                 switch (move.nDescrip.substring(2, 3)) {
-                    case "K" -> col =  "e";
+                    case "K" -> col = "e";
                     case "Q" -> col = "d";
 
                     default -> {
@@ -40,7 +38,7 @@ public class MaquinaTraductora {
                 if (Character.toString(move.nDescrip.charAt(0)).equals("P")) {
                     piece = "";
                 } else {
-                    piece = Character.toString(move.nDescrip.charAt(0)).toLowerCase();
+                    piece = Character.toString(move.nDescrip.charAt(0));
                 }
                 row = Character.toString(move.nDescrip.charAt(2));
                 col = switch (move.nDescrip.substring(3, 4)) {
@@ -93,14 +91,16 @@ public class MaquinaTraductora {
 
     // This method takes List of moves in descriptive notation and returns a list
     // of moves in algebraic notation
-    public String descripToAlgebTransGame(ArrayList<String> game) {
+    public String descripToAlgebTransGame(String[] game) {
         String movAlg = "";
 
         return movAlg;
     }
+
+    public String[] textToarrayMoves(String gameName) {
+        return gameName.split("\\s+");
+    }
 }
-
-
 //   public String algebToDescripTrans(String mov){
 //        String movDescrip = "";
 //

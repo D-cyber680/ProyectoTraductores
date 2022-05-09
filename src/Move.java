@@ -22,7 +22,7 @@ public class Move {
     //if(nAlgebr == null && nDescrip != null) {
         if (Pattern.compile("^([PKQRBN])([1-8])(RQ|NQ|BQ|Q|K|BK|NK|RK)$").matcher(nDescrip).matches()) {
             this.tjugada = 0;
-        } else if (Pattern.compile("^[P|K|Q|R|B|N][x][1-8][RQ|NQ|BQ|Q|K|BK|NK|RK]$").matcher(nDescrip).matches()) {
+        } else if (Pattern.compile("^([PKQRBN])(x)([1-8])(RQ|NQ|BQ|Q|K|BK|NK|RK)$").matcher(nDescrip).matches()) {
             this.tjugada = 1;
         } else if (Pattern.compile("^O-O$|^O-O-O$").matcher(nDescrip).matches()) {
             this.tjugada = 2;
