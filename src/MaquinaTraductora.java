@@ -91,15 +91,16 @@ public class MaquinaTraductora {
 
     // This method takes List of moves in descriptive notation and returns a list
     // of moves in algebraic notation
-    public String descripToAlgebTransGame(String[] game) {
-        String movAlg = "";
+//    public String descripToAlgebTransGame(String[] game)
+//    {
+//        String movAlg = "";
+//
+//        return movAlg;
+//    }
 
-        return movAlg;
-    }
-
-    public String[] textToarrayMoves(String gameName) {
-        return gameName.split("\\s+");
-    }
+//    public String[] textToarrayMoves(String gameName) {
+//        return gameName.split("\\s+");
+//    }
 }
 //   public String algebToDescripTrans(String mov){
 //        String movDescrip = "";
