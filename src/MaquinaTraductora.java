@@ -1,12 +1,7 @@
 public class MaquinaTraductora {
-
-    public MaquinaTraductora() {
-
-    }
-
     // This method accepts a move in string format with descriptive notation and returns it
     // into algebraic notation
-    public void descripToAlgebTransMove(Move move) {
+    public static void descripToAlgebTransMove(Move move) {
         String piece, col = null, row;
         switch (move.tjugada) {
             case 0 -> {
