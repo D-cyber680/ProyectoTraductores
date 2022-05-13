@@ -25,8 +25,8 @@ public class Game {
     // This methods takes a list of moves and returns a String with moves
     public String listToGameAlg(){
         //code
-        for(Move m :this.moves){
-            this.stb_alg.append(" ").append(m.nAlgebr);
+        for(Move m : this.moves){
+            this.stb_alg.append(m.nAlgebr).append(" ");
         }
         return stb_alg.toString();
     }

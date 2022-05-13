@@ -1,7 +1,8 @@
 public class MaquinaTraductora {
+    public static int[] rows_board = {1,2,3,4,5,6,7,8};
     // This method accepts a move in string format with descriptive notation and returns it
     // into algebraic notation
-    public static void descripToAlgebTransMove(Move move) {
+    public static Move descripToAlgebTransMove(Move move) {
         String piece, col = null, row;
         switch (move.tjugada) {
             case 0 -> {
@@ -26,6 +27,10 @@ public class MaquinaTraductora {
                             default -> "";
                         };
                     }
+                }
+                if (!move.isWhite)
+                {
+                     row = Integer.toString(rows_board[8 - Integer.parseInt(row)]);
                 }
                 move.nAlgebr = piece + col + row;
             }
@@ -81,6 +86,8 @@ public class MaquinaTraductora {
                 move.nAlgebr = col + row + "=" + move.nDescrip.charAt(move.nDescrip.length() - 1);
             }
         }
+
+        return move;
     }
 }
 
