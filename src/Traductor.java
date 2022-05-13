@@ -7,8 +7,6 @@ public class Traductor {
         Game new_game = new Game(game_desc);
         System.out.println(new_game.listToGameAlg());
         new_game.stringToFile("juegoescrito.txt","Irvin","Daniel","0-1","22-12-99");
-//        Move movimiento = new Move("P6Q",null,false);
-//        MaquinaTraductora.descripToAlgebTransMove(movimiento);
-//        System.out.println(movimiento.nAlgebr);
+//
     }
 }

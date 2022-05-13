@@ -2,6 +2,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.io.File;  // Import the File class
 import java.io.IOException;
+
 public class Game {
     ArrayList<Move> moves = new ArrayList<>();
     StringBuilder stb_alg = new StringBuilder();
@@ -44,7 +45,7 @@ public class Game {
     }
 
     // This method takes String with moves and returns a game file in .pgn or .txt
-    public void stringToFile(String filename,String White, String Black, String result,String Date){
+    public void stringToFile(String filename,String white, String black, String result,String date){
         try {
             File myObj = new File(filename);
             if (myObj.createNewFile())
@@ -54,6 +55,10 @@ public class Game {
                 System.out.println("File already exists.");
             }
             FileWriter myWriter = new FileWriter(filename);
+            myWriter.write("[White '"+ white + "']\n");
+            myWriter.write("[Black '"+ black + "']\n");
+            myWriter.write("[Result '"+ result + "']\n");
+            myWriter.write("[Date '"+ date + "']\n");
             myWriter.write(stb_alg.toString());
             myWriter.close();
         } catch (IOException e)
