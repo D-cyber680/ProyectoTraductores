@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class TheFrame extends JFrame {
     public TheFrame(){
@@ -7,6 +8,11 @@ public class TheFrame extends JFrame {
         this.setResizable(false);
         this.setSize(1000,800);
         this.setVisible(true);
+        //layout
+        this.setLayout(null);
+        ImageIcon image = new ImageIcon("logo.png");
+        this.setIconImage(image.getImage());
+        this.getContentPane().setBackground(Color.WHITE);
 
 
     }
