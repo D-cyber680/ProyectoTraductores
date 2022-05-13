@@ -24,11 +24,19 @@ public class Game {
 
     // This methods takes a list of moves and returns a String with moves
     public String listToGameAlg(){
+        int i = 0,jugada = 1;
         //code
         for(Move m : this.moves)
         {
             MaquinaTraductora.descripToAlgebTransMove(m);
-            this.stb_alg.append(m.nAlgebr).append(" ");
+            if(i % 2 == 0){
+                this.stb_alg.append(jugada).append(". ").append(m.nAlgebr).append(" ");
+                jugada++;
+            }else {
+                this.stb_alg.append(m.nAlgebr).append(" ");
+
+            }
+            i++;
         }
         return stb_alg.toString();
     }
