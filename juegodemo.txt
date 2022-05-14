@@ -1,0 +1,5 @@
+[White 'Irvin']
+[Black 'Daniel']
+[Result '0-1']
+[Date '22-12-99']
+1. e4 e5 2. Nf3 Bc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Bc5 6. d4 xd4 7. O-O d3 

@@ -60,6 +60,10 @@ public class TransGUI1 {
             //System.out.println("contents = " + game_desc);
         });
 
+        b4.addActionListener(e -> {
+            new_game.stringToFile("juegodemo2.txt","Irvin","Daniel","0-1","22-12-99");
+        });
+
         panel.add(l1); panel.add(l2); panel.add(ta1s); panel.add(ta2s);panel.add(b3);panel.add(b4);
         frame.add(panel);
         frame.show();
